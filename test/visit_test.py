@@ -34,7 +34,7 @@ class TestVisitController(unittest.TestCase):
         self.assertIsInstance(visit_list, list)
 
     def test_find_by_id(self):
-        status, message = VisitController.save("fatemeh", "akbari", "09127865914", "AliRazaei", "1404/02/10")
+        status, message = VisitController.save("fatemeh", "akbari", "09127865914", "AliRazaei", "1404/02/10", "ortfgihoerhgoegknegjetougegoiehghe")
         if status:
             status_all, visit_list = VisitController.find_all()
             if visit_list:
@@ -44,12 +44,12 @@ class TestVisitController(unittest.TestCase):
                 self.assertIsInstance(patient)
 
     def test_find_by_firstname_and_lastname(self):
-        status, visit_list = VisitController.find_by_firstname_and_lastname("", "")
+        status, visit_list = VisitController.find_by_firstname_and_lastname("fatemeh", "akbari")
         self.assertTrue(status)
         self.assertIsInstance(visit_list, list)
 
     def test_find_by_phone_number(self):
-        status, visit_list = VisitController.find_by_phone_number("")
+        status, visit_list = VisitController.find_by_phone_number("09127865914")
         self.assertTrue(status)
         self.assertIsInstance(visit_list, list)
 
