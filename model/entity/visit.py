@@ -1,5 +1,6 @@
 from tools.visit_validator import *
 
+
 class Visit:
     def __init__(self, patient_id, first_name, last_name, phone_number, doctor_name,
                  date_time, description=None):
