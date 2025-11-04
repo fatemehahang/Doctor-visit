@@ -8,23 +8,23 @@ class DashboardView:
 
     def __init__(self):
         font = ("Arial", 18, "bold")
-        width = 24
+        width = 12
         background_color = "violet red"
         foreground_color = "white"
 
         y_dist = 60
 
         self.window = Tk()
-        self.window.geometry("730x690")
+        self.window.geometry("400x350")
         self.window.title("Dashboard")
         self.window.config(bg="white")
 
-        image = Image.open("./view/images/img.jpeg")
+        image = Image.open("./view/images/img.png")
         image = ImageTk.PhotoImage(image)
 
         Label(self.window, image=image).place(x=100, y=15)
 
         Button(self.window, font=font, width=width, bg=background_color, fg=foreground_color, text="Visit",
-               command=self.visit_view).place(x=190, y=590)
+               command=self.visit_view).place(x=108, y=250)
 
         self.window.mainloop()

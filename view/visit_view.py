@@ -1,6 +1,5 @@
 from tkinter import *
 from tkinter import messagebox
-
 from controller.visit_controller import VisitController
 from view.component.label_with_entry import LabelWithEntry
 from view.component.table import Table
@@ -17,7 +16,7 @@ class Visit:
         self.last_name = LabelWithEntry(self.window, "LastName", 20, 100)
         self.phone_number = LabelWithEntry(self.window, "PhoneNumber", 20, 140)
         self.doctor_name = LabelWithEntry(self.window, "DoctorName", 20, 180)
-        self.date_time = LabelWithEntry(self.window, "DateTime", 20, 220)
+        self.date_time = LabelWithEntry(self.window, "DateTime", 20, 220, state="readonly")
         self.description = LabelWithEntry(self.window, "Description", 20, 260)
 
         self.table = Table(
