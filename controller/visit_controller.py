@@ -1,7 +1,10 @@
+from os.path import exists
+
 import db
 from model import *
 from model.entity.visit import Visit
 from model.service import *
+from model.repository.visit_repository import exists_visit_at_time
 from model.service.visit_service import VisitService
 from tools.logging import Logger
 
@@ -10,6 +13,8 @@ class VisitController:
     def save(cls, first_name, last_name, phone_number, doctor_name, date_time, description):
         try:
             visit = Visit(None, first_name, last_name, phone_number, doctor_name, date_time, description)
+            if exists_visit_at_time(date_time):
+                return False
             visit.validate()
             visit = VisitService.save(visit)
             Logger.info(f"Visit {visit} Saved")

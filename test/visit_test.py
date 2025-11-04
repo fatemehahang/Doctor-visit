@@ -5,21 +5,21 @@ from controller.visit_controller import VisitController
 class TestVisitController(unittest.TestCase):
 
     def test_save_visit(self):
-        status, message = VisitController.save("Fatemeh", "Mohammadi", "09124589617", "AliRezaei", "1404/02/10", "jdlekjrfclerlkejbvkjebrufkjfk")
+        status, message = VisitController.save("Fatemeh", "Mohammadi", "09124589617", "AliRezaei", "2025-02-10", "jdlekjrfclerlkejbvkjebrufkjfk")
         self.assertTrue(status)
         self.assertIn("Saved successfully", message)
 
     def test_update_visit(self):
-        status, message = VisitController.save("Fatemeh", "Mohammadi", "09124589617", "AliRezaei", "1404/02/10", "jdlekjrfclerlkejbvkjebrufkjfk")
+        status, message = VisitController.save("Fatemeh", "Mohammadi", "09124589617", "AliRezaei", "2025-02-10", "jdlekjrfclerlkejbvkjebrufkjfk")
         if status:
             status_all, visit_list = VisitController.find_all()
             if visit_list:
                 patient_id = visit_list[-1].patient_id
-                status, message = VisitController.update("Fatemeh", "ahang", "09124589617", "AliRezaei", "1404/02/10", "jdlekjrfclerlkejbvkjebrufkjfk")
+                status, message = VisitController.update("Fatemeh", "ahang", "09124589617", "AliRezaei", "2025-02-10", "jdlekjrfclerlkejbvkjebrufkjfk")
                 self.assertTrue(status)
 
     def test_delete_visit(self):
-        status, message = VisitController.save("Fatemeh", "Mohammadi", "09124589617", "AliRezaei", "1404/02/10", "jdlekjrfclerlkejbvkjebrufkjfk")
+        status, message = VisitController.save("Fatemeh", "Mohammadi", "09124589617", "AliRezaei", "2025-02-10", "jdlekjrfclerlkejbvkjebrufkjfk")
         if status:
             status_all, visit_list = VisitController.find_all()
             if visit_list:
@@ -34,7 +34,7 @@ class TestVisitController(unittest.TestCase):
         self.assertIsInstance(visit_list, list)
 
     def test_find_by_id(self):
-        status, message = VisitController.save("fatemeh", "akbari", "09127865914", "AliRazaei", "1404/02/10", "ortfgihoerhgoegknegjetougegoiehghe")
+        status, message = VisitController.save("fatemeh", "akbari", "09127865914", "AliRazaei", "2025-02-10", "ortfgihoerhgoegknegjetougegoiehghe")
         if status:
             status_all, visit_list = VisitController.find_all()
             if visit_list:

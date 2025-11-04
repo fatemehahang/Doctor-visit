@@ -18,7 +18,7 @@ class Visit:
         last_name_validator(self.last_name)
         phone_number_validator(self.phone_number)
         doctor_name_validator(self.doctor_name)
-        date_time_validator(self.date_time)
+        datetime_validator(self.date_time)
         description_validator(self.description)
 
     def full_name(self):

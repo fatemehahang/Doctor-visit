@@ -1,8 +1,9 @@
 import re
 from persiantools.jdatetime import JalaliDateTime
+import datetime
 
 def first_name_validator(first_name):
-    if not (type(first_name) == str and re.match(r"^[a-z]{2,30}$", first_name)):
+    if not (type(first_name) == str and re.match(r"^[a-zA-z]{2,30}$", first_name)):
         raise ValueError("Invalid first_name !!!")
     else:
         return first_name
@@ -25,9 +26,9 @@ def doctor_name_validator(doctor_name):
     else:
         return doctor_name
 
-def date_time_validator(date_time):
-    if not (type(date_time) == str and re.match(r"^\d{2}[/-]\d{2}[/-]\d{4}\s\d{2}:\d{2}(:\d{2})$", date_time)):
-        raise ValueError("Invalid date_time !!!")
+def datetime_validator(date_time):
+    if not datetime.date.today().strftime("%Y-%m-%d") == date_time:
+        raise ValueError("Invalid date time format !!!")
     else:
         return date_time
 

@@ -60,3 +60,9 @@ class VisitRepository:
         visit_list = [Visit(*visit) for visit in self.cursor.fetchall()]
         self.disconnect()
         return visit_list
+
+def exists_visit_at_time(self, patient_id, date_time):
+    self.connect()
+    self.cursor.execute("select * from visit where {patient_id} and date_time={date_time}")
+    self.disconnect()
+    return
