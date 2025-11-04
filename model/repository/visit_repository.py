@@ -1,6 +1,4 @@
 import sqlite3
-
-from model.entity import visit
 from model.entity.visit import Visit
 
 class VisitRepository:

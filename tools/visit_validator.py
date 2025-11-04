@@ -18,15 +18,16 @@ def phone_number_validator(phone_number):
         raise ValueError("Invalid phone_number !!!")
     else:
         return phone_number
+
 def doctor_name_validator(doctor_name):
-    if not (type(doctor_name) == str and re.match(r"^[a-z]{2,30}$", doctor_name)):
+    if not (type(doctor_name) == str and re.match(r"^[a-zA-Z\s]{2,30}$", doctor_name)):
         raise ValueError("Invalid doctor_name !!!")
     else:
         return doctor_name
 
-def datetime_validator(date_time):
-    if not JalaliDateTime.strptime(date_time, "%Y-%m-%d %H:%M"):
-        raise ValueError("Invalid date time format !!!")
+def date_time_validator(date_time):
+    if not (type(date_time) == str and re.match(r"^\d{2}[/-]\d{2}[/-]\d{4}\s\d{2}:\d{2}(:\d{2})$", date_time)):
+        raise ValueError("Invalid date_time !!!")
     else:
         return date_time
 
