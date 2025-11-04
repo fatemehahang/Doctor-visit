@@ -31,6 +31,6 @@ class DashboardView:
         Button(self.window, font=font, width=width, bg=background_color, fg=foreground_color, text="Visit",
                command=self.visit_view).place(x=108, y=250)
         Button(self.window, font=font, width=width, bg=background_color, fg=foreground_color, text="Payment",
-               command=self.visit_view).place(x=108, y=250 + y_dist * 1)
+               command=self.payment_view).place(x=108, y=250 + y_dist * 1)
 
         self.window.mainloop()
