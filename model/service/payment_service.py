@@ -32,6 +32,7 @@ class PaymentService:
         else:
             raise Exception("Payment not found !!")
 
+    @classmethod
     def find_by_id(cls, payment_id):
         payment = cls.payment_repository.find_by_id(payment_id)
         if payment:

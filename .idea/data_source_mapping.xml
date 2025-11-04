@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/8f9e2b3d-f920-4baa-a29e-81fc93ff51cd/console.sql" value="8f9e2b3d-f920-4baa-a29e-81fc93ff51cd" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/f973e1ed-dfb2-4f11-bf91-1ea4b5ad90e6/console.sql" value="f973e1ed-dfb2-4f11-bf91-1ea4b5ad90e6" />
-    <file url="file://$PROJECT_DIR$/db/payment.sql" value="f973e1ed-dfb2-4f11-bf91-1ea4b5ad90e6" />
+    <file url="file://$PROJECT_DIR$/db/payment.sql" value="8f9e2b3d-f920-4baa-a29e-81fc93ff51cd" />
     <file url="file://$PROJECT_DIR$/db/visit.sql" value="f973e1ed-dfb2-4f11-bf91-1ea4b5ad90e6" />
   </component>
 </project>
