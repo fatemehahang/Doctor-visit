@@ -19,7 +19,7 @@ class DashboardView:
         self.window.title("Dashboard")
         self.window.config(bg="white")
 
-        image = Image.open("./view/images/img.png")
+        image = Image.open("./view/images/img.jpeg")
         image = ImageTk.PhotoImage(image)
 
         Label(self.window, image=image).place(x=195, y=15)

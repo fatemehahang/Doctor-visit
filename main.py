@@ -1,3 +1,3 @@
 from view.dashboard import DashboardView
 
-ui= DashboardView()
+ui = DashboardView()
