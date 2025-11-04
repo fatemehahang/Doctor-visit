@@ -19,7 +19,7 @@ class TestVisitController(unittest.TestCase):
                 self.assertTrue(status)
 
     def test_delete_visit(self):
-        status, message = VisitController.save("", "", "", "", "", "")
+        status, message = VisitController.save("Fatemeh", "Mohammadi", "09124589617", "AliRezaei", "1404/02/10", "jdlekjrfclerlkejbvkjebrufkjfk")
         if status:
             status_all, visit_list = VisitController.find_all()
             if visit_list:
