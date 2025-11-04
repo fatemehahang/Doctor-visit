@@ -1,5 +1,6 @@
-from tkinter import Tk, IntVar, Button
+from tkinter import *
 from tkinter import messagebox
+
 from controller.visit_controller import VisitController
 from view.component.label_with_entry import LabelWithEntry
 from view.component.table import Table
@@ -8,7 +9,7 @@ from view.component.table import Table
 class Visit:
     def __init__(self):
         self.window = Tk()
-        self.window.geometry("500x500")
+        self.window.geometry("1010x400")
         self.window.title("Doctor Visit")
 
         self.patient_id = LabelWithEntry(self.window, "id", 20, 20, data_type=IntVar, state="readonly")
@@ -22,16 +23,17 @@ class Visit:
         self.table = Table(
             self.window,
             ["Id", "first_name", "last_name", "phone_number", "doctor_name", "date_time", "description"],
-            [40,100,100,100,100,160],
+            [40,100,100,100,100,100,160],
             275, 20,
             12,
             self.select_from_table
         )
 
-        Button(self.window, text="Refresh", width=7, command=self.refresh).place(x=20, y=220)
-        Button(self.window, text="Save", width=7, command=self.save_click).place(x=20, y=260)
-        Button(self.window, text="Edit", width=7, command=self.edit_click).place(x=100, y=260)
-        Button(self.window, text="Delete", width=7, command=self.delete_click).place(x=180, y=260)
+        Button(self.window, text="Select patient", width=19, command=self.select_visit).place(x=100, y=300)
+        Button(self.window, text="Refresh", width=7, command=self.refresh).place(x=20, y=300)
+        Button(self.window, text="Save", width=7, command=self.save_click).place(x=20, y=340)
+        Button(self.window, text="Edit", width=7, command=self.edit_click).place(x=100, y=340)
+        Button(self.window, text="Delete", width=7, command=self.delete_click).place(x=180, y=340)
         self.reset_form()
         self.window.mainloop()
 
