@@ -4,7 +4,6 @@ from controller.visit_controller import VisitController
 from view.component.label_with_entry import LabelWithEntry
 from view.component.table import Table
 
-
 class Visit:
     def __init__(self):
         self.window = Tk()
