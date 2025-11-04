@@ -1,6 +1,5 @@
 from tkinter import *
 from PIL import ImageTk, Image
-
 from model.entity.payment import Payment
 from view.visit_view import Visit
 

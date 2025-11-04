@@ -1,7 +1,6 @@
 import unittest
 from controller.visit_controller import VisitController
 
-
 class TestVisitController(unittest.TestCase):
 
     def test_save_visit(self):

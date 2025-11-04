@@ -1,5 +1,4 @@
 import re
-from persiantools.jdatetime import JalaliDateTime
 import datetime
 
 def first_name_validator(first_name):
