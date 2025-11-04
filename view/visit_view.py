@@ -1,8 +1,6 @@
 from tkinter import Tk, IntVar, Button
 from tkinter import messagebox
 from controller.visit_controller import VisitController
-from view import *
-from model import *
 from view.component.label_with_entry import LabelWithEntry
 from view.component.table import Table
 
