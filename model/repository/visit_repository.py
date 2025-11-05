@@ -1,4 +1,5 @@
 import sqlite3
+from model.entity import visit
 from model.entity.visit import Visit
 
 class VisitRepository:
@@ -61,8 +62,8 @@ class VisitRepository:
         self.disconnect()
         return visit_list
 
-def exists_visit_at_time(self, patient_id, date_time):
-    self.connect()
-    self.cursor.execute("select * from visit where {patient_id} and date_time={date_time}")
-    self.disconnect()
-    return
+    def exists_visit_at_time(self, patient_id, date_time):
+        self.connect()
+        self.cursor.execute("insert into visit (patient_id, date_time) values (?,?)",[patient_id, date_time])
+        self.connection.commit()
+        self.disconnect()

@@ -6,7 +6,7 @@ class PaymentView:
     def __init__(self):
         self.window = Tk()
         self.window.geometry("1100x450")
-        self.window.title("Payment")
+        self.window.title("Payment View")
 
         self.payment_id = LabelWithEntry(self.window, "Id", 20, 20, data_type=IntVar, state="readonly")
         self.transaction_type = LabelWithEntry(self.window, "TransactType", 20, 60)
@@ -14,7 +14,7 @@ class PaymentView:
         self.date_time = LabelWithEntry(self.window, "DateTime", 20, 140)
         self.payment_id = LabelWithEntry(self.window, "Customer", 20, 180, data_type=IntVar, state="readonly")
         self.total_amount = LabelWithEntry(self.window, "TotalAmount", 20, 220, data_type=IntVar)
-        self.description = LabelWithEntry(self.window, "Description", 20, 300)
+        self.description = LabelWithEntry(self.window, "Description", 20, 260)
         self.table = Table(
             self.window,
             ["Id", "TransactType", "PaymentType", "DateTime", "CustomerId", "TotalAmount", "EmployeeId", "Description"],

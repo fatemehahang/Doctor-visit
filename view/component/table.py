@@ -13,9 +13,11 @@ class Table:
 
     def refresh_table(self, data_list):
         self.clear_table()
-        if data_list:
-            for data in data_list:
-                self.table.insert("", END, values=data.to_tuple())
+        if data_list is None:
+            data_list = []
+        else:
+            print(f"Error: Expected a list, got type {type(data_list)}")
+            data_list = [data_list]
 
     def __init__(self, window, headings, column_widths, x, y, height=10, function_name=None):
         self.function_name = function_name

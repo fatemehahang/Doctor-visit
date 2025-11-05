@@ -2,13 +2,14 @@ from tkinter import *
 from PIL import ImageTk, Image
 from model.entity.payment import Payment
 from view.visit_view import Visit
+from view.payment_view import PaymentView
 
 class DashboardView:
     def visit_view(self):
         ui = Visit()
 
     def payment_view(self):
-        ui = Payment()
+        ui = PaymentView()
 
     def __init__(self):
         font = ("Arial", 18, "bold")
